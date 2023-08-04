@@ -16,7 +16,7 @@ let clearEarnSum = 0;
 document.addEventListener("DOMContentLoaded", function () {
     // Функция для загрузки данных с сервера
     function loadJSON(callback) {
-        fetch('http://localhost:3000/get_data')
+        fetch('https:/bet-calculator.vercel.app/get_data')
             .then(response => response.json())
             .then(data => callback(data))
             .catch(error => console.error('Ошибка при получении данных:', error));
@@ -88,7 +88,7 @@ function SaveInputs() {
         "Game": game.value,
         "Enshure (0/10)": enshure.value
     };
-    fetch('http://localhost:3000/update_data', {
+    fetch('https:/bet-calculator.vercel.app/update_data', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
