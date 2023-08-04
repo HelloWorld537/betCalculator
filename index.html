@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <img src="mac.png" alt="" class="mac">
+    <div class="container">
+        <div class="header">
+            <h1>Bet<span style="color: rgb(15, 200, 15)">N</span>otes</h1>
+        </div>
+        <div class="content">
+            <div class="table-wrap">
+                <table id="betTable">
+                    <thead>
+                        <tr>
+                            <th>Win/Lose</th>
+                            <th>Bet Amount</th>
+                            <th>X</th>
+                            <th>Game</th>
+                            <th>Enshure (0/10)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Место для заполнения данных из JSON-файла -->
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="footer">
+                <div class="bets-amount">Bets: 100</div>
+
+                <button class="addNewBet">Add New Bet</button>
+                <div class="sum-profit">Profit: 100$</div>
+            </div>
+
+            <div id="inputFields" style="display: none">
+                <!-- Поле для заполнения информации о ставке -->
+                <input type="text" id="winLose" placeholder="Win/Lose" required>
+                <input type="text" id="betAmount" placeholder="Bet Amount" required>
+                <input type="text" id="x" placeholder="X" required>
+                <input type="text" id="game" placeholder="Game" required>
+                <input type="text" id="enshure" placeholder="Enshure (0/10)" required>
+                <input type="submit" onclick="SaveInputs()" class='btn-save' value="save">
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="clientLogick.js"></script>
+
+</body>
+
+</html>
